@@ -1,0 +1,22 @@
+{
+  "name": "theta23",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build-css": "node-sass public/css/style.scss public/css/style-custom.css",
+    "dev": "nodemon index.js",
+    "build": "npm i"
+  },
+  "type": "module",
+  "author": "Hariharan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mime": "^3.0.0",
+    "mongoose": "^7.0.4",
+    "node-sass": "^8.0.0"
+  }
+}
