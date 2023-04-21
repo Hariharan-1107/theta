@@ -11,7 +11,7 @@ import { Console, log } from 'console';
 
 
 const app = express();
-
+let check=0;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -25,7 +25,14 @@ async function checkCredentials(email, password) {
 }
 
 app.get("/", (req, res) => {
-  res.render('main')
+  if(check===0)
+  {
+    res.render('main');
+  }
+  else{
+    res.render('afterloginpage')
+  }
+ 
 });
 
 app.get("/about", (req, res) => {
@@ -64,8 +71,15 @@ app.post("/login",async (req,res)=>{
   const pas=req.body.password;
   if(await checkCredentials(em,pas))
   {
-    console.log("Successful");
+    check=1;
+    res.redirect("/home");
   } 
+})
+app.get("/dashboard",(req,res)=>{
+  res.send("Hello Buddy");
+})
+app.get("/home",(req,res)=>{
+  res.render('afterloginpage');
 })
 app.listen(process.env.PORT || 8080, () => { 
     console.log("Server Started");
