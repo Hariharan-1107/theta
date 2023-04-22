@@ -1,24 +1,60 @@
-<%- include('header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Theta 2k23</title>
+		<link rel="icon" type="image/png" href="images/logo.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/style-custom.css">
+	</head>
+	<body>
+
+		<header class="header">
+			<a href="/" class="logo"> 
+				<img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
+				Theta <span style="color: #0e8bb5;">2k23</span>
+			</a>
+			<nav class="navbar">
+			   <div id="close-navbar" class="fas fa-times"></div>
+			   <a href="/">Home</a>
+			   <a href="/about">About</a>
+			   <a href="/clusters">Clusters</a>
+			   <a href="/contact">Contact</a>
+			</nav>
+			<div class="icons">
+			   <div id="account-btn" class="fas fa-user"></div>
+			   <div id="menu-btn" class="fas fa-bars"></div>
+			</div>
+		 </header>
 <div class="account-form">
     <div id="close-form" class="fas fa-times"></div>
     <div class="buttons">
        <span class="btn active login-btn">Login</span>
        <span class="btn register-btn">Register</span>
     </div>
+   
     <form class="login-form active" action="/login" method="post">
        <h3>Login Now</h3>
-       <input type="email" placeholder="Enter your email" name="email" class="box">
+       <input type="email" placeholder="Enter your email" name="username" class="box">
        <input type="password" placeholder="Enter your password" name="password" class="box">
        <div class="flex">
           <input type="checkbox" name="" id="remember-me">
           <label for="remember-me">Remember me</label>
           <a href="#">Forgot password?</a>
        </div>
+        <% if (error) { %>
+        <p class="error"><%= error %></p>
+        <% } %>
        <button type="submit" class="btn">Login</button>
-    </form>
+    </form>>
     <form class="register-form" action="/signin" method="post">
        <h3>Register Now</h3>
-       <input type="email" placeholder="Enter your email" name="email" class="box">
+       <input type="email" placeholder="Enter your email" name="username" class="box">
        <input type="password" placeholder="Enter your password" name="password" class="box">
        <input type="password" placeholder="Confirm your password" name="cpassword" class="box">
        <button class="btn" type="submit">Register now</button>  
@@ -219,6 +255,15 @@
        </div>
  
     </div>
- 
  </section>
+ <% if(check==1) { %>
+    <script>
+    let accountForm = document.querySelector('.account-form')
+
+    document.querySelector('#account-btn').onclick = () =>{
+      accountForm.classList.remove('active');
+      window.location.href="/dashboard";
+    }
+</script>
+<% } %>
 <%- include('footer.ejs') %>

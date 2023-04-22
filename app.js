@@ -4,20 +4,46 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import mime from 'mime';
 import mongoose from 'mongoose';
-import User from './model/account.js';
+import session from 'express-session';
+import passport  from 'passport';
+import passportLocalMongoose from 'passport-local-mongoose';
 import { Console, log } from 'console';
-//Db section
-      mongoose.connect("mongodb+srv://hariharan:hariharan11@cluster0.yctk4yu.mongodb.net/?retryWrites=true&w=majority");
+import { check } from 'express-validator';
 
 
 const app = express();
-let check=0;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
+
+app.use(session({
+    secret:" Our Little Secret",
+    resave:false,
+    saveUninitialized:false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Db section
+mongoose.connect("mongodb+srv://hariharan:hariharan11@cluster0.yctk4yu.mongodb.net/myapp?retryWrites=true&w=majority", {
+  useNewUrlParser: true,});
+
+const userSchema=new mongoose.Schema({
+  email:String,
+  password:String
+})
+
+userSchema.plugin(passportLocalMongoose);
+
+const User =new mongoose.model('User',userSchema)
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 async function checkCredentials(email, password) {
   const user = await User.findOne({ email, password });
@@ -25,12 +51,13 @@ async function checkCredentials(email, password) {
 }
 
 app.get("/", (req, res) => {
-  if(check===0)
+  if(req.isAuthenticated())
   {
-    res.render('main');
+    res.render('main',{check:1,error:""})
   }
-  else{
-    res.render('afterloginpage')
+  else
+  {
+    res.render('main',{check:0,error:""})
   }
  
 });
@@ -50,37 +77,69 @@ app.get("/contact", (req, res) => {
 app.get("/Robotics", (req, res) => {
   res.sendFile(__dirname + "/Robotics/Robotics.html");
 });
+app.get("/login",(req,res)=>{
+  res.render('main',{check:1,error:""})
+})
 
 app.post("/signin", async (req, res) => {
-  console.log("hello");  
-  const p=req.body.password;
-    const cp=req.body.cpassword;
-    const u=req.body.email;
-    if(p===cp)
-    {
-      const user = await User.create({
-        email:u,
-        password:p,
-      });
-      res.redirect("/")
-    }
-    console.log("Sign in Successfull");
-});
-app.post("/login",async (req,res)=>{
-  const em=req.body.email;
-  const pas=req.body.password;
-  if(await checkCredentials(em,pas))
+  User.register({username:req.body.username},req.body.password,function(err,user)
   {
-    check=1;
-    res.redirect("/home");
-  } 
+    if(err){
+        console.log(err);
+        res.redirect("/");
+    }else {
+      passport.authenticate("local")(req,res,function(){
+        res.redirect("/");
+      })
+    }
+  })
+});
+
+app.post("/login",async(req,res)=>{
+  const user = new User({
+    username:req.body.username,
+    password:req.body.password
+  });
+
+  req.login(user,function(err){
+    if(err){
+      console.log(err);
+    }else{
+      passport.authenticate("local")(req,res,function(){
+        res.redirect("/");
+      })
+    }
+  })
 })
+
+
+// app.post("/login",async (req,res)=>{
+//   const em=req.body.email;
+//   const pas=req.body.password;
+//   if(await checkCredentials(em,pas))
+//   { 
+//       usercheck=1;
+//       res.render('main',{check:usercheck,error:" "});
+//   }
+//   else
+//   {
+//     res.render('main',{check:0,error:"Invalid email or password"});
+//   } 
+// })
 app.get("/dashboard",(req,res)=>{
-  res.send("Hello Buddy");
+  if(req.isAuthenticated())
+  {
+    res.render('dashboard')
+  }
+  else
+  {
+    res.redirect('/login')
+  }
 })
 app.get("/home",(req,res)=>{
   res.render('afterloginpage');
 })
+
 app.listen(process.env.PORT || 8080, () => { 
     console.log("Server Started");
 });
