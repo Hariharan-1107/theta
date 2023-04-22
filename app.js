@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import mime from 'mime';
-import mongoose from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 import session from 'express-session';
 import passport  from 'passport';
 import passportLocalMongoose from 'passport-local-mongoose';
@@ -30,11 +30,13 @@ app.use(passport.session());
 //Db section
 mongoose.connect("mongodb+srv://hariharan:hariharan11@cluster0.yctk4yu.mongodb.net/myapp?retryWrites=true&w=majority", {
   useNewUrlParser: true,});
-
+const eventSchema = new Schema({name:String});
 const userSchema=new mongoose.Schema({
   email:String,
   fname:String,
   lname:String,
+  ph:String,
+  events:[eventSchema],
   password:String
 })
 
@@ -84,7 +86,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.post("/signin", async (req, res) => {
-  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname},req.body.password,function(err,user)
+  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number},req.body.password,function(err,user)
   {
     if(err){
         console.log(err);
@@ -142,6 +144,16 @@ app.get("/home",(req,res)=>{
   res.render('afterloginpage');
 })
 
+
+app.get("/logout",function(req,res){
+  req.logOut(function(err)
+  {
+    if(err){
+      console.log(err);
+    }
+    res.redirect("/")
+  });
+})
 app.listen(process.env.PORT || 8080, () => { 
     console.log("Server Started");
 });
