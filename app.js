@@ -33,6 +33,8 @@ mongoose.connect("mongodb+srv://hariharan:hariharan11@cluster0.yctk4yu.mongodb.n
 
 const userSchema=new mongoose.Schema({
   email:String,
+  fname:String,
+  lname:String,
   password:String
 })
 
@@ -82,7 +84,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.post("/signin", async (req, res) => {
-  User.register({username:req.body.username},req.body.password,function(err,user)
+  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname},req.body.password,function(err,user)
   {
     if(err){
         console.log(err);
@@ -129,7 +131,7 @@ app.post("/login",async(req,res)=>{
 app.get("/dashboard",(req,res)=>{
   if(req.isAuthenticated())
   {
-    res.render('dashboard')
+    res.render('dashboard',{user:req.user})
   }
   else
   {

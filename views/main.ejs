@@ -48,12 +48,16 @@
           <a href="#">Forgot password?</a>
        </div>
         <% if (error) { %>
-        <p class="error"><%= error %></p>
+            <script>
+                alert("Incorrect Email or password");
+            </script>
         <% } %>
        <button type="submit" class="btn">Login</button>
     </form>>
     <form class="register-form" action="/signin" method="post">
        <h3>Register Now</h3>
+       <input type="text" placeholder="Enter your firstname" name="fname" class="box">
+       <input type="text" placeholder="Enter your lastname" name="lname" class="box">
        <input type="email" placeholder="Enter your email" name="username" class="box">
        <input type="password" placeholder="Enter your password" name="password" class="box">
        <input type="password" placeholder="Confirm your password" name="cpassword" class="box">
