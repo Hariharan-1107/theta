@@ -47,11 +47,6 @@
           <label for="remember-me">Remember me</label>
           <a href="#">Forgot password?</a>
        </div>
-        <% if (error) { %>
-            <script>
-                alert("Incorrect Email or password");
-            </script>
-        <% } %>
        <button type="submit" class="btn">Login</button>
     </form>>
     <form class="register-form" action="/signin" method="post">
@@ -261,4 +256,175 @@
  
     </div>
  </section>
-<%- include('footer.ejs') %>
+
+ <section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3> <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
+                Theta <span style="color: #0e8bb5;">2k23</span></h3>
+            <p>Techno-management fest of SASTRA Deemed to be University</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="/" class="link">Home</a>
+            <a href="/about" class="link">About</a>
+            <a href="/clusters" class="link">Clusters</a>
+            <a href="/contact" class="link">Contact</a>
+        </div>
+        <div class="box">
+            <h3>Useful links</h3>
+            <a href="https://www.sastra.edu/" target="_blank"class="link">Sastra University</a>
+            <a href="#" class="link">Rules & Regulation</a>
+        </div>
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest upadates</p>
+            <form action="">
+                <input type="email" name="" placeholder="Enter your email" id="" class="email">
+                <input type="submit" value="Subscribe" class="btn" onclick="showMessage()">
+            </form>
+        </div>
+    </div>
+    <div class="credit">
+         Created by <span>Web Design Commitee</span> |@ all rights reserved! 
+    </div>
+ </section>
+
+ <script>
+    function showMessage() {
+      alert("Thanks for subscribing :)");
+    }
+</script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+</script>
+<script>
+    let navbar = document.querySelector('.header .navbar')
+
+document.querySelector('#menu-btn').onclick = () =>{
+  navbar.classList.add('active');
+}
+
+document.querySelector('#close-navbar').onclick = () =>{
+  navbar.classList.remove('active');
+};
+
+document.querySelector('#account-btn').onclick = () =>{
+    window.location.href="/dashboard";
+}
+
+var swiper = new Swiper(".home-slider", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:true,
+  },
+  loop:true,
+  grabCursor:true,
+});
+
+var swiper = new Swiper(".home-courses-slider", {
+  loop:true,
+  grabCursor:true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+var swiper = new Swiper(".teachers-slider", {
+  loop:true,
+  grabCursor:true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+var swiper = new Swiper(".reviews-slider", {
+  loop:true,
+  grabCursor:true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+var swiper = new Swiper(".logo-slider", {
+  loop:true,
+  grabCursor:true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    450: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    991: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+  },
+});
+
+let accordion = document.querySelectorAll('.faq .accordion-container .accordion');
+
+accordion.forEach(acco =>{
+  acco.onclick = () =>{
+    accordion.forEach(dion => dion.classList.remove('active'));
+    acco.classList.toggle('active');
+  };
+});
+
+document.querySelector('.load-more .btn').onclick = () =>{
+  document.querySelectorAll('.courses .box-container .hide').forEach(show =>{
+    show.style.display = 'block';
+  });
+  document.querySelector('.load-more .btn').style.display = 'none';
+};
+
+</script>
+</body>
+
+</html>

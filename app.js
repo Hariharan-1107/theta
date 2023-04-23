@@ -57,11 +57,11 @@ async function checkCredentials(email, password) {
 app.get("/", (req, res) => {
   if(req.isAuthenticated())
   {
-    res.render('main',{check:1,error:""})
+    res.sendFile(__dirname+"/index.html")
   }
   else
   {
-    res.render('main',{check:0,error:""})
+    res.render('main',{error:""});
   }
  
 });
@@ -86,7 +86,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.post("/signin", async (req, res) => {
-  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number},req.body.password,function(err,user)
+  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number },req.body.password,function(err,user)
   {
     if(err){
         console.log(err);
@@ -115,6 +115,7 @@ app.post("/login",async(req,res)=>{
     }
   })
 })
+
 
 
 // app.post("/login",async (req,res)=>{
