@@ -85,6 +85,10 @@ app.get("/login",(req,res)=>{
   res.render('main',{check:1,error:""})
 })
 
+app.get("/events",(req,res)=>{
+  res.render('events');
+})
+
 app.post("/signin", async (req, res) => {
   User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number },req.body.password,function(err,user)
   {
@@ -116,21 +120,6 @@ app.post("/login",async(req,res)=>{
   })
 })
 
-
-
-// app.post("/login",async (req,res)=>{
-//   const em=req.body.email;
-//   const pas=req.body.password;
-//   if(await checkCredentials(em,pas))
-//   { 
-//       usercheck=1;
-//       res.render('main',{check:usercheck,error:" "});
-//   }
-//   else
-//   {
-//     res.render('main',{check:0,error:"Invalid email or password"});
-//   } 
-// })
 app.get("/dashboard",(req,res)=>{
   if(req.isAuthenticated())
   {
