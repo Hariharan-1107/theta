@@ -10,7 +10,6 @@ import passportLocalMongoose from 'passport-local-mongoose';
 import { Console, log } from 'console';
 import { check } from 'express-validator';
 
-
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -36,7 +35,22 @@ const userSchema=new mongoose.Schema({
   fname:String,
   lname:String,
   ph:String,
-  events:[eventSchema],
+  eventcount:Number,
+  events:{
+    name:[String],
+    eventArray:[Array],
+  },
+  Access:[String],
+  Biogenesis:[String],
+  Electronica:[String],
+  Equilibria:[String],
+  Informatica:[String],
+  Mathematica:[String],
+  Optica:[String],
+  Pabbaja:[String],
+  Robotics:[String],
+  Sportiva:[String],
+  Emulsion:[String],
   password:String
 })
 
@@ -77,20 +91,50 @@ app.get("/clusters", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render('contact');
 });
-
 app.get("/Robotics", (req, res) => {
-  res.sendFile(__dirname + "/Robotics/Robotics.html");
+  res.sendFile(__dirname + "/Robotics.html");
+});
+app.get("/Access", (req, res) => {
+  res.sendFile(__dirname + "/Access.html");
+});
+app.get("/Biogenesis", (req, res) => {
+  res.sendFile(__dirname + "/Biogenesis.html");
+});
+app.get("/Electronica", (req, res) => {
+  res.sendFile(__dirname + "/Electronica.html");
+});
+app.get("/Emulsion", (req, res) => {
+  res.sendFile(__dirname + "/Emulsion.html");
+});
+app.get("/Equilibria", (req, res) => {
+  res.sendFile(__dirname + "/Equilibria.html");
+});
+app.get("/Informatica", (req, res) => {
+  res.sendFile(__dirname + "/Informatica.html");
+});
+app.get("/Mathematica", (req, res) => {
+  res.sendFile(__dirname + "/Mathematica.html");
+});
+app.get("/Optics", (req, res) => {
+  res.sendFile(__dirname + "/Optics.html");
+});
+app.get("/Robotics", (req, res) => {
+  res.sendFile(__dirname + "/Pabbaja.html");
+});
+app.get("/Sportiva", (req, res) => {
+  res.sendFile(__dirname + "/Sportiva.html");
 });
 app.get("/login",(req,res)=>{
   res.render('main',{check:1,error:""})
 })
 
 app.get("/events",(req,res)=>{
-  res.render('events');
+  res.render('events',{count:req.user.eventcount});
 })
 
+
 app.post("/signin", async (req, res) => {
-  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number },req.body.password,function(err,user)
+  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number,eventcount:0 },req.body.password,function(err,user)
   {
     if(err){
         console.log(err);
@@ -120,10 +164,52 @@ app.post("/login",async(req,res)=>{
   })
 })
 
+async function addAccessValues(userId, accessArray, newValues) {
+  try {
+    const result = await User.updateOne({ _id: userId }, { $push: { [accessArray]: { $each: newValues } } });
+    console.log(`${accessArray} array updated for user ${userId}`);
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+app.post('/reg-event', async(req, res) => {
+  let count=0;
+  for(const key in req.body) {
+    for(const i in req.body[key]){
+      count++;
+    }
+    const accessArray = key;
+    const values=req.body[key];
+    addAccessValues(req.user._id, accessArray, values);
+    try {
+      const result = await User.updateOne(
+        { _id: req.user._id },
+        { $push: { "events.name": accessArray, "events.eventArray":  values } } ,
+      );      
+    } catch(err) {
+      console.error(err);
+    }
+  }
+  try {
+    const result = await User.findOneAndUpdate(
+      { _id: req.user._id },
+      { $set: { eventcount: count } },
+      { new: true } // Return the updated document
+    );
+  } catch (err) {
+    console.error(err);
+  }
+});
+
+
 app.get("/dashboard",(req,res)=>{
   if(req.isAuthenticated())
   {
+    console.log(req.user);
     res.render('dashboard',{user:req.user})
+
   }
   else
   {
@@ -147,3 +233,41 @@ app.get("/logout",function(req,res){
 app.listen(process.env.PORT || 8080, () => { 
     console.log("Server Started");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

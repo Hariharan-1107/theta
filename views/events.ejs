@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -15,8 +15,7 @@
    
 	</head>
 	<body>
-
-		<header class="header">
+    <header class="header">
 			<a href="/" class="logo"> 
 				<img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
 				Theta <span style="color: #0e8bb5;">2k23</span>
@@ -39,6 +38,7 @@
         <a href="index.html">Home</a> / Clusters 
     </p>
 </section>
+<form action="/reg-event" method="post">
 <section class="courses">
     <h1 class="heading">Visit our Clusters</h1>
     <div class="box-container">
@@ -53,10 +53,10 @@
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     Click here for Register
                 </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
                   <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">Access</h5>
+                    <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
                     <div>
@@ -64,16 +64,16 @@
                     </div>
                     <div class="dropdown mt-3">
                       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                          Events
+                        Events
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">RRR</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">PS 2</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">SING IN THE RAIN</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Access" id="" value="RRR">RRR</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Access" id="" value="PS2">PS 2</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Access" id="" value="SING IN THE RAIN">SING IN THE RAIN</li>
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div>                
                 
                 <div class="icons">
                     <span> <i class="fas fa-book"></i> Contest: 6 </span>
@@ -106,11 +106,11 @@
                         Events
                     </button>
                     <ul class="dropdown-menu">
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">BIG BANG THEORY</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">BRAIN CHASERS</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">SMARTICLES</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">MODEL EXHIBIT</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">MEMORIES BRING BACK YOU </li>
+                      <li class="dropdown-item"><input type="checkbox" name="Biogenesis" id="" value="BIG BANG THEORY">BIG BANG THEORY</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Biogenesis" id="" value="BRAIN CHASERS">BRAIN CHASERS</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Biogenesis" id="" value="SMARTICLES">SMARTICLES</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Biogenesis" id="" value="MODEL EXHIBIT">MODEL EXHIBIT</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Biogenesis" id="" value="MEMORIES BRING BACK YOU">MEMORIES BRING BACK YOU </li>
                     </ul>
                   </div>
                 </div>
@@ -146,10 +146,10 @@
                           Events
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">WHO AM I</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">TECH TRAID</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">DIGITAL FUNDS</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">MIND TEASE</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Electronica" id="" value="WHO AM I">WHO AM I</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Electronica" id="" value="TECH TRAID">TECH TRAID</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Electronica" id="" value="DIGITAL FUNDS">DIGITAL FUNDS</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Electronica" id="" value="MIND TEASE">MIND TEASE</li>
                       </ul>
                     </div>
                   </div>
@@ -185,11 +185,11 @@
                           Events
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">CLASH OF BRAINS</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">SEEDS</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">SPARKLES</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">MYSTERIO</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">PIVOTAL</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Equilibria" id="" value="CLASH OF BRAINS">CLASH OF BRAINS</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Equilibria" id="" value="SEEDS">SEEDS</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Equilibria" id="" value="SPARKLES">SPARKLES</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Equilibria" id="" value="MYSTERIO">MYSTERIO</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Equilibria" id="" value="PIVOTAL">PIVOTAL</li>
                       </ul>
                     </div>
                   </div>
@@ -225,10 +225,10 @@
                           Events
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">CAPTURE THE FLAG</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">CODE A THON</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">TECH QUIZ</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">IDEATHON</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Informatica" id="" value="CAPTURE THE FLAG">CAPTURE THE FLAG</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Informatica" id="" value="CODE A THON">CODE A THON</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Informatica" id="" value="TECH QUIZ">TECH QUIZ</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Informatica" id="" value="IDEATHON">IDEATHON</li>
                       </ul>
                     </div>
                   </div>
@@ -264,11 +264,11 @@
                           Events
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">RAZZLE DAZZLE</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">MATHPLAY</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">DIVIDE,COMBINE AND CONQUER</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">FUNKY FEST</li>
-                        <li class="dropdown-item"><input type="checkbox" name="" id="">PAPER PRESENTATION</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Mathematica" id="" value="RAZZLE DAZZLE">RAZZLE DAZZLE</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Mathematica" id="" value="MATHPLAY">MATHPLAY</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Mathematica" id="" value="DIVIDE,COMBINE AND CONQUER">DIVIDE,COMBINE AND CONQUER</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Mathematica" id="" value="FUNKY FEST">FUNKY FEST</li>
+                        <li class="dropdown-item"><input type="checkbox" name="Mathematica" id="" value="PAPER PRESENTATION">PAPER PRESENTATION</li>
                       </ul>
                     </div>
                   </div>
@@ -304,10 +304,10 @@
                         Events
                     </button>
                     <ul class="dropdown-menu">
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">TREASURE HUNT</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">JODO JEETHO</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">KICK THE LUCK</li>
-                      <li class="dropdown-item"><input type="checkbox" name="" id="">SOS</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Optica" id="" value="TREASURE HUNT">TREASURE HUNT</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Optica" id="" value="JODO JEETHO">JODO JEETHO</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Optica" id="" value="KICK THE LUCK">KICK THE LUCK</li>
+                      <li class="dropdown-item"><input type="checkbox" name="Optica" id="" value="SOS">SOS</li>
                     </ul>
                   </div>
                 </div>
@@ -343,12 +343,12 @@
                       Events
                   </button>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><input type="checkbox" name="" id="">KALAM</li>
-                    <li class="dropdown-item"><input type="checkbox" name="" id="">ALL IN ALL AZHAGURAJA</li>
-                    <li class="dropdown-item"><input type="checkbox" name="" id="">THAMILZHODU VILAYADU</li>
-                    <li class="dropdown-item"><input type="checkbox" name="" id="">RAJAPAT</li>
-                    <li class="dropdown-item"><input type="checkbox" name="" id="">PENAMUNAIYIL PESU</li>
-                    <li class="dropdown-item"><input type="checkbox" name="" id="">DRAMA AND PATIMANDRAM,RAJAPAT  </li>
+                    <li class="dropdown-item"><input type="checkbox" name="Pabbaja" id="" value="KALAM">KALAM</li>
+                    <li class="dropdown-item"><input type="checkbox" name="Pabbaja" id="" value="ALL IN ALL AZHAGURAJA">ALL IN ALL AZHAGURAJA</li>
+                    <li class="dropdown-item"><input type="checkbox" name="Pabbaja" id="" value="THAMILZHODU VILAYADU">THAMILZHODU VILAYADU</li>
+                    <li class="dropdown-item"><input type="checkbox" name="Pabbaja" id="" value="RAJAPAT">RAJAPAT</li>
+                    <li class="dropdown-item"><input type="checkbox" name="Pabbaja" id="" value="PENAMUNAIYIL PESU">PENAMUNAIYIL PESU</li>
+                    <li class="dropdown-item"><input type="checkbox" name="Pabbaja" id="" value="DRAMA AND PATIMANDRAM,RAJAPAT">DRAMA AND PATIMANDRAM,RAJAPAT  </li>
                   </ul>
                 </div>
               </div>
@@ -384,7 +384,7 @@
                     Events
                 </button>
                 <ul class="dropdown-menu">
-                  <li class="dropdown-item"><input type="checkbox" name="" id="">ROBO CRAZE</li>
+                  <li class="dropdown-item"><input type="checkbox" name="Robotics" id="" value="ROBO CRAZE">ROBO CRAZE</li>
                 </ul>
               </div>
             </div>
@@ -420,18 +420,17 @@
                   Events
               </button>
               <ul class="dropdown-menu">
-                <li class="dropdown-item"><input type="checkbox" name="" id="">POWER LIFTING</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">TUG OF WAR</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">URIADI</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">DEAD HANG</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">ARM WRESTILING</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">BASKET BALL</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">BICEP CURL</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">FOOTBALL SHOOT</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">MUSICAL CHAIR</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">ONE OVER CRICKET</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">LUCKY CORNER</li>
-                <li class="dropdown-item"><input type="checkbox" name="" id="">BOLDOUT</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="POWER LIFTING">POWER LIFTING</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="TUG OF WAR">TUG OF WAR</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="URIADI">URIADI</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="DEAD HANG">DEAD HANG</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="ARM WRESTILING">ARM WRESTILING</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="BASKET BALL">BASKET BALL</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="FOOTBALL SHOOT">FOOTBALL SHOOT</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="MUSICAL CHAIR">MUSICAL CHAIR</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="ONE OVER CRICKET">ONE OVER CRICKET</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="LUCKY CORNER">LUCKY CORNER</li>
+                <li class="dropdown-item"><input type="checkbox" name="Sportiva" id="" value="BOLDOUT">BOLDOUT</li>
               </ul>
             </div>
           </div>
@@ -467,12 +466,12 @@
                 Events
             </button>
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><input type="checkbox" name="" id="">SHORT FILM</li>
-              <li class="dropdown-item"><input type="checkbox" name="" id="">AD FILM</li>
-              <li class="dropdown-item"><input type="checkbox" name="" id="">MASHUP</li>
-              <li class="dropdown-item"><input type="checkbox" name="" id="">DIGITAL CAMERA PHOTOGRAPHY</li>
-              <li class="dropdown-item"><input type="checkbox" name="" id="">MOBILE PHOTOGRAPHY</li>
-              <li class="dropdown-item"><input type="checkbox" name="" id="">ON SPOT PHOTOGRAPHY</li>
+              <li class="dropdown-item"><input type="checkbox" name="Emulsion" id="" value="SHORT FILM">SHORT FILM</li>
+              <li class="dropdown-item"><input type="checkbox" name="Emulsion" id="" value="AD FILM">AD FILM</li>
+              <li class="dropdown-item"><input type="checkbox" name="Emulsion" id="" value="MASHUP">MASHUP</li>
+              <li class="dropdown-item"><input type="checkbox" name="Emulsion" id="" value="DIGITAL CAMERA PHOTOGRAPHY">DIGITAL CAMERA PHOTOGRAPHY</li>
+              <li class="dropdown-item"><input type="checkbox" name="Emulsion" id="" value="MOBILE PHOTOGRAPHY">MOBILE PHOTOGRAPHY</li>
+              <li class="dropdown-item"><input type="checkbox" name="Emulsion" id="" value="ON SPOT PHOTOGRAPHY">ON SPOT PHOTOGRAPHY</li>
             </ul>
           </div>
         </div>
@@ -483,11 +482,9 @@
       </div>
   </div>
 </div>
-
-
-
-
 </div>
+<button class="btn submit-btn" type="submit">Submit</button>
+</form>
 </section>
 <section class="footer">
   <div class="box-container">
@@ -529,6 +526,10 @@
 </section>
 
 <style>
+  .header a {
+  text-decoration: none;
+}
+
   .offcanvas-body {
   font-size: 18px;
 }
@@ -536,13 +537,69 @@
 .offcanvas-body * {
   font-size: inherit;
 }
-</style>
+.dropdown-menu {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.dropdown-item label {
+  margin-bottom: 0;
+}
+
+.submit-btn{
+  text-align: center;
+}
+
+</style>
 <script>
-  function showMessage() {
-    alert("Thanks for subscribing :)");
-  }
+  // Set a global variable with the count value
+  let count = <%= count %>;
+
+  // Get all the checkboxes
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Add an event listener to each checkbox
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      count++;
+      if (count >= 10) {
+        // Disable all unchecked checkboxes
+        checkboxes.forEach(cb => {
+          if (!cb.checked) {
+            cb.disabled = true;
+          }
+        });
+        alert("you have selected 10 events");
+      }
+    } else {
+      count--;
+      // Enable all checkboxes
+      checkboxes.forEach(cb => {
+        cb.disabled = false;
+      });
+    }
+  });
+});
 </script>
+
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <!-- <script src="js/script.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

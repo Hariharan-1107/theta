@@ -38,7 +38,7 @@
        <span class="btn register-btn">Register</span>
     </div>
    
-    <form class="login-form active" action="/login" method="post">
+    <form class="login-form " action="/login" method="post">
        <h3>Login Now</h3>
        <input type="email" placeholder="Enter your email" name="username" class="box">
        <input type="password" placeholder="Enter your password" name="password" class="box">
@@ -54,7 +54,7 @@
         <% } %>
        <button type="submit" class="btn">Login</button>
     </form>>
-    <form class="register-form" action="/signin" method="post">
+    <form class="register-form active" action="/signin" method="post">
        <h3>Register Now</h3>
        <input type="text" placeholder="Enter your firstname" name="fname" class="box">
        <input type="text" placeholder="Enter your lastname" name="lname" class="box">
@@ -76,7 +76,7 @@
                     <div class="conten">
                         <h3>Theta 2k23</h3>
                         <h2>Fun Beyond Limits<small></small></h2>
-                        <a onclick="scrollToSection('#subject')" class="b">Get Started</a>
+                        <a  class="b" id="start-button">Get Started</a>
                     </div>
                 </div>
             </section>				
@@ -261,4 +261,5 @@
  
     </div>
  </section>
+ 
 <%- include('footer.ejs') %>

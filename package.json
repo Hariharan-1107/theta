@@ -21,6 +21,7 @@
     "express-session": "^1.17.3",
     "express-validator": "^7.0.1",
     "mime": "^3.0.0",
+    "mongodb": "^5.3.0",
     "mongoose": "^7.0.4",
     "node-sass": "^8.0.0",
     "passport": "^0.6.0",
