@@ -129,7 +129,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.get("/events",(req,res)=>{
-  res.render('events',{user:req.user});
+  res.render('events');
 })
 
 
