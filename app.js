@@ -35,7 +35,6 @@ const userSchema=new mongoose.Schema({
   fname:String,
   lname:String,
   ph:String,
-  eventcount:Number,
   events:{
     name:[String],
     eventArray:[Array],
@@ -134,7 +133,7 @@ app.get("/events",(req,res)=>{
 
 
 app.post("/signin", async (req, res) => {
-  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number,eventcount:0 },req.body.password,function(err,user)
+  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number },req.body.password,function(err,user)
   {
     if(err){
         console.log(err);
@@ -188,6 +187,7 @@ app.post('/reg-event', async(req, res) => {
       console.error(err);
     }
   }
+  res.redirect("/dashboard");
 });
 
 
