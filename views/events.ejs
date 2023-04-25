@@ -560,34 +560,32 @@
 </style>
 <script>
   // Set a global variable with the count value
-  let count = <%= count %>;
-
   // Get all the checkboxes
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 // Add an event listener to each checkbox
 checkboxes.forEach(checkbox => {
   checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-      count++;
-      if (count >= 10) {
-        // Disable all unchecked checkboxes
-        checkboxes.forEach(cb => {
-          if (!cb.checked) {
-            cb.disabled = true;
-          }
-        });
-        alert("you have selected 10 events");
-      }
+    let checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+    if (checkedCount >= 10) {
+      // Disable all other checkboxes if more than 10 are selected
+      
+      checkboxes.forEach(cb => {
+        if (!cb.checked) {
+          cb.disabled = true;
+        }
+      });
+      alert("you have selected 10 Events");
     } else {
-      count--;
-      // Enable all checkboxes
+      // Enable all checkboxes if less than or equal to 10 are selected
       checkboxes.forEach(cb => {
         cb.disabled = false;
       });
     }
   });
 });
+
 </script>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

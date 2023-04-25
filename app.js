@@ -129,7 +129,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.get("/events",(req,res)=>{
-  res.render('events',{count:req.user.eventcount});
+  res.render('events',{user:req.user});
 })
 
 
@@ -175,11 +175,7 @@ async function addAccessValues(userId, accessArray, newValues) {
 }
 
 app.post('/reg-event', async(req, res) => {
-  let count=0;
   for(const key in req.body) {
-    for(const i in req.body[key]){
-      count++;
-    }
     const accessArray = key;
     const values=req.body[key];
     addAccessValues(req.user._id, accessArray, values);
@@ -191,15 +187,6 @@ app.post('/reg-event', async(req, res) => {
     } catch(err) {
       console.error(err);
     }
-  }
-  try {
-    const result = await User.findOneAndUpdate(
-      { _id: req.user._id },
-      { $set: { eventcount: count } },
-      { new: true } // Return the updated document
-    );
-  } catch (err) {
-    console.error(err);
   }
 });
 
