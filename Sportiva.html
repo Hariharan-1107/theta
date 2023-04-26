@@ -1,216 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Sportiva 2k23</title>
-      <link rel="icon" type="image/png" href="images/Sportiva.jpg">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<head>
+	<meta charset="UTF-8">
+	<title>Sportiva</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="css/style.css">
-   </head>
-   <body>
-      <header class="header">
-         <a href="#" class="logo"> 
-            <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
-             Theta <span style="color: #0e8bb5;">2k23</span>
-         </a>
-			<nav class="navbar">
-			   <div id="close-navbar" class="fas fa-times"></div>
-			   <a href="/">Home</a>
-			   <a href="/about">About</a>
-			   <a href="/clusters">Clusters</a>
-			   <a href="/contact">Contact</a>
-			</nav>
-         <div class="icons">
-            <div id="account-btn" class="fas fa-user"></div>
-            <div id="menu-btn" class="fas fa-bars"></div>
-         </div>
-       </header>
-       <div class="account-form">
-         <div id="close-form" class="fas fa-times"></div>
-         <div class="buttons">
-            <span class="btn active login-btn">Login</span>
-            <span class="btn register-btn">Register</span>
-         </div>
-         <form class="login-form active" action="">
-            <h3>Login Now</h3>
-            <input type="email" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
-            <div class="flex">
-              <input type="checkbox" name="" id="remember-me">
-              <label for="remember-me">Remember me</label>
-              <a href="#">Forgot password?</a>
+	<!-- Custom CSS -->
+	<style>
+		.navbar-brand {
+			font-weight: bold;
+			font-size: 28px;
+		}
+		.card {
+			margin: 20px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			transition: 0.3s;
+		}
+		.card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		}
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.card-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		.card-text {
+			font-size: 18px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+   <header class="header">
+      <a href="/" class="logo"> 
+         <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
+         Theta <span style="color: #0e8bb5;">2k23</span>
+      </a>
+      <nav class="navbar">
+         <div id="close-navbar" class="fas fa-times"></div>
+         <a href="/">Home</a>
+         <a href="/about">About</a>
+         <a href="/clusters">Clusters</a>
+         <a href="/contact">Contact</a>
+      </nav>
+      <div class="icons">
+         <a href="/dashboard"> <div class="fas fa-user"></div></a>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+
+	<!-- Events -->
+	<div class="container">
+      <h1 class="text-center my-5">Our Events</h1>
+      <div class="row">
+         <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/powerlifting.png" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Power Lifting</h3>
+                <p class="card-text">Powerlifting is a strength sport where competitors perform three lifts – squat, bench press, and deadlift – with the heaviest weight possible.</p>
+                <div class="collapse card-text" id="powerlifting-details">
+                  <p>The rules vary slightly depending on the organization, but in general, each competitor has three attempts to complete each lift, and the highest weight successfully lifted in each lift is added together to determine their total score.Lifters must follow specific rules on technique and form, and each lift is judged by three referees who decide whether the lift was successful or not based on strict criteria. The lifter with the highest total score in their weight class wins</p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#powerlifting-details" aria-controls="powerlifting-details" id="details-toggle">More Details</button>
+              </div>
             </div>
-            <a href="error/login.html" class="btn">Login now</a>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/tugofwar.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Tug of war</h3>
+                <p class="card-text">Tug of war is a team game that involves two teams pulling on opposite ends of a rope until one team is able to pull the other team over a designated line or marker</p>
+                <div class="collapse card-text" id="tugofwar-details">
+                  <p>The game starts with each team holding onto the rope, with the center point marked. The goal is to pull the rope and move the center point past the designated line or marker on their side of the playing area. The team that accomplishes this goal wins the </p>
+                </div>
+                <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tugofwar-details" aria-controls="tugofwar-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/uriadi.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title"> Uri adi </h3>
+                <p class="card-text">Uri adi is an individual game where the player will be blind folded and will be  granted only one swing the game will over when the swing ends.</p>
+                <div class="collapse card-text" id="uriadi-details">
+                  <p>The winner is the player who breaks the pot being blindfolded.</p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#uriadi-details" aria-controls="uriadi-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/deadhang.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Dead Hang</h3>
+                <p class="card-text">Dead hang is a game where players hang from a horizontal bar or elevated object with both hands for as long as possible. The player must not touch the ground or any other object during the game and cannot receive assistance or support from others. </p>
+                <div class="collapse card-text" id="deadhang-details">
+                  <p>The game ends when the player can no longer maintain their grip on the bar or touches the ground with any part of their body. The winner is the player who hangs from the bar for the longest amount of time/125 seconds.</p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#deadhang-details" aria-controls="deadhang-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/armwrestling.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Arm wrestling </h3>
+                <p class="card-text">Arm wrestling is a one-on-one physical competition between two individuals, where each person attempts to pin the other person’s arm to a designated surface. </p>
+                <div class="collapse card-text" id="armwrestling-details">
+                  <p>The game starts with both participants placing their elbow on a table or other surface, and gripping each other’s hand. The objective is to use arm strength and technique to force the opponent’s hand down to the table, or touch the designated surface with their hand. The winner is the person who successfully pins their opponent’s arm or hand to the table.</p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#armwrestling-details" aria-controls="armwrestling-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+         </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/basketshoot.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Basket ball</h3>
+                <p class="card-text">Basket ball it is an individual game where the player will be granted 6 shoots within the given chance the player needed 3 correct shoots to win the game (the court position will be set by the event coordinator </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/footballshoot.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Football shoot</h3>
+                <p class="card-text">It’s an individual game where the player have to  hit the targets that are pinned in the goal post there will be 5 targets in the goal post. The player will be awarded with coupon according to their respective points  </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/musichair.jpg " alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Musical chair</h3>
+                <p class="card-text">To start, you’ll need a few chairs set up in a circle or line, with one fewer chair than the number of players. When the music starts, everyone walks or dances around the chairs, and when it stops, players must quickly sit in a chair.
+               </p>
+                <div class="collapse card-text" id="musicalchair-details">
+                  <p> The player left standing is out and one chair is removed. This continues until there is only one chair and one player left, who is the winner.</p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#musicalchair-details" aria-controls="musicalchair-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="card">
+              <img src="images/Sportiva/1overcricket.png" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">One over cricket</h3>
+                <p class="card-text">In a one over cricket game, each team faces a single over of six balls. The batting team aims to score as many runs as possible, while the fielding team tries to limit the runs scored and take wickets.</p>
+                <div class="collapse card-text" id="oneovercricket-details">
+                  <p>  The batsman can be dismissed in the same ways as in regular cricket, such as being caught out, bowled, or run out. If the ball is hit out of the playing area, it’s considered a six, and if it bounces before crossing the boundary, it’s a four. The team with the most runs at the end of their over wins the game. It’s a quick and exciting format of cricket that can be played in a short amount of time.
+                  </p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#oneovercricket-details" aria-controls="oneovercricket-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="card">
+              <img src="images/Sportiva/bowledout.jpg" alt="Event Image">
+              <div class="card-body">
+                <h3 class="card-title">Bold Out</h3>
+                <p class="card-text">Bold out is an individual game the player will be granted 6 throws with in the given chances the player need to hit the stump at least four times to win the game</p>
+              </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">lucky corner</h3>
+                <p class="card-text">Lucky corner is a simple and fun game often played at events and parties. To start, four corners of the room are designated as lucky corners, and one person is chosen to be “it.”</p>
+                <div class="collapse card-text" id="luckycorner-details">
+                  <p>The players then close their eyes and count to ten while “it” chooses one of the lucky corners. Once the counting is done, the players try to guess which corner is the lucky one. If a player chooses the correct corner, they remain in the game, and “it” chooses again. If a player chooses an incorrect corner, they are out, and the game continues until only one player is left.</p>
+                </div>
+                <button class="btn btn-outline-primary details-toggle" data-bs-toggle="collapse" data-bs-target="#luckycorner-details" aria-controls="luckycorner-details" id="details-toggle">More Details</button>
+              </div>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="card">
+              <div class="card-body" style="text-align: center;">
+                <h3 class="card-title">Interested in our Events...?</h3>
+                <a href="/events"> <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#luckycorner-details" aria-controls="luckycorner-details" id="details-toggle">Register Now </button> </a>
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <style>
+        .header a {
+  text-decoration: none;
+}
+      #swipe-right-button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#swipe-right-button.show {
+  opacity: 1;
+}
+
+   </style>
+   <script>
+    const detailsToggles = document.querySelectorAll('.details-toggle');
+  
+    detailsToggles.forEach((detailsToggle) => {
+      const eventDetails = document.querySelector(detailsToggle.getAttribute('data-bs-target'));
+  
+      eventDetails.addEventListener('hide.bs.collapse', function () {
+        detailsToggle.textContent = 'More Details';
+      });
       
-         </form>
-         <form class="register-form" action="">
-            <h3>Register Now</h3>
-            <input type="email" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
-            <input type="password" placeholder="Confirm your password" class="box">
-            <a href="error/register.html" class="btn">Register now</a>
-         </form>
-       </div>
-      <section class="heading-link">
-         <h3>Sportica Registration</h3>
-         <p><a href="index.html"> Theta </a> <a href="clusters.html"> / Clusters </a> / Sportiva </p>
-      </section>
-      <section class="about" style="text-align: center;">
-			<div class="content">
-				<h3 class="about-title" style="font-size: 3.6rem;">About Sportiva</h3>
-				<p style="font-size: 1.7rem;">blah blah blah<br></p>
-            <p style="font-size: 2.1rem; margin-top: -20px;">
-               <big>
-                  <b style="font-weight: 1200; padding-left: 30%; padding-right: 30%;">
-                     "Be A Player Not A Spectator"
-                  </b>
-               </big>
-            </p>
-			</div>
-		</section>
-      <section class="contest">
-         <h1 class="heading"> Contest Registration </h1>
-         <div class="icons-container">
-            <div class="contest-container">
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Power Lifting</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Tug of war</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Arm Wrestling</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>One over Cricket</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="faq">
-         <h1 class="heading">About our Events</h1>
-         <div class="accordion-container">
-            <div class="accordion active">
-               <div class="accordion-heading">
-                  <h3>Power Lifting?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a short film contest with a PG-13 theme, with a 7-8 minute limit on the film's duration. The registration concludes on April 20th, 2023 and the deadline for submission is April 25th, 2023. Cash prizes of Rs. 15,000, Rs. 7,000, and Rs. 3,000 will be awarded to the top three films.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Tug of war?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a AD film contest, with a 2-3 minute limit on the AD's duration. The registration concludes on April 20th, 2023 and the deadline for submission is April 25th, 2023. Cash prizes of Rs. 3,000, Rs. 1,500, and Rs. 500 will be awarded to the top three films.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Arm Wrestling?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a MashUp contest with a theme of biography or creating awareness for society, with a duration of 2-3 minutes and may contain copyrighted material. Submissions online and prizes of Rs. 3000, Rs. 1500, and Rs. 500 for the top 3 winners.
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>One over Cricket?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  This photography contest is open to college students and has two themes: digital camera photography (reflection) and mobile photography (environmental portrait). Registration concludes on April 15th, with the submission deadline on April 25th. Prizes are awarded for both categories: Rs. 3,000, Rs. 1,500, and Rs. 500 for digital camera photography, and Rs. 1,500, Rs. 700, and Rs. 300 for mobile photography. Participants must not upload photos on any social media platforms and follow all event guidelines.
-               </p>
-            </div>
-         </div>
-      </section>
-      <section class="contact">
-         <h1 class="heading"> Contact Us </h1>
-            <div class="icons-container">
-               <div class="icons">
-                  <i class="fas fa-phone"></i>
-                  <h3>Phone :</h3>
-                  <label style="font-size: medium; color: #868686;">Surya   : </label><a style="font-size:medium;" href="tel:+919360617308" onclick="event.preventDefault(); window.location.href='tel:+919360617308';">+91 93606 17308</a><br>
-                  <label style="font-size: medium; color: #868686;">Ranil   : </label><a style="font-size:medium;" href="tel:+919994679774" onclick="event.preventDefault(); window.location.href='tel:+919994679774';">+91 99946 79774</a><br>
-                  <label style="font-size: medium; color: #868686;">Abinash : </label><a style="font-size:medium;" href="tel:+919345642528" onclick="event.preventDefault(); window.location.href='tel:+919345642528';">+91 93456 42528</a>
-               </div>
-               <div class="icons">
-                  <i class="fas fa-envelope"></i>
-                  <h3> Email : </h3>
-                  <a href="mailto:theta.emulsion@gmail.com" target="_blank" style="font-size: medium;">theta.emulsion@gmail.com</a>
-               </div>
-               <div class="icons">
-                  <i class="fas fa-map"></i>
-                  <h3>Instagram :</h3>
-                  <a href="https://instagram.com/team_emulsion?igshid=MGNiNDI5ZTU=" target="_blank" style="font-size: medium;">team_emulsion</a>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="footer">
-         <div class="box-container">
-             <div class="box">
-               <h3> <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
-                  Theta <span style="color: #0e8bb5;">2k23</span></h3>
-               <p>Techno-management fest of SASTRA Deemed to be University</p>
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
-             </div>
-            <div class="box">
-               <h3>Quick links</h3>
-               <a href="index.html" class="link">Home</a>
-               <a href="about.html" class="link">About</a>
-               <a href="clusters.html" class="link">Clusters</a>
-               <a href="contact.html" class="link">Contact</a>
-            </div>
-            <div class="box">
-               <h3>Useful links</h3>
-               <a href="https://www.sastra.edu/" target="_blank"class="link">Sastra University</a>
-               <a href="#" class="link">Rules & Regulation</a>
-            </div>
-            <div class="box">
-               <h3>Newsletter</h3>
-               <p>Subscribe for latest upadates</p>
-               <form action="">
-                  <input type="email" name="" placeholder="Enter your email" id="" class="email">
-                  <input type="submit" value="Subscribe" class="btn" onclick="showMessage()">
-               </form>
-            </div>
-         </div>
-         <div class="credit">
-             Created by <span>Emulsion</span> | all rights reserved! 
-         </div>
-       </section>
-      
-       <script>
-         function showMessage() {
-           alert("Thanks for subscribing :)");
-         }
-      </script>
-      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-      <script src="js/script.js"></script>
-      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+      eventDetails.addEventListener('show.bs.collapse', function () {
+        detailsToggle.textContent = 'Less Details';
+      });
+    });
+  </script>
+      <!-- Bootstrap JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
    </body>
-</html>
+   </html>
+   
