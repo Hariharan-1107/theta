@@ -1,229 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Mathematica 2k23</title>
-      <link rel="icon" type="image/png" href="images/Mathematica.jpg">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-      <link rel="stylesheet" href="css/style.css">
-   </head>
-   <body>
-      <header class="header">
-         <a href="#" class="logo"> 
-            <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
-             Theta <span style="color: #0e8bb5;">2k23</span>
-         </a>
-			<nav class="navbar">
-			   <div id="close-navbar" class="fas fa-times"></div>
-			   <a href="/">Home</a>
-			   <a href="/about">About</a>
-			   <a href="/clusters">Clusters</a>
-			   <a href="/contact">Contact</a>
-			</nav>
-         <div class="icons">
-            <div id="account-btn" class="fas fa-user"></div>
-            <div id="menu-btn" class="fas fa-bars"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theta 2k23</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-custom.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <a href="/" class="logo">
+      <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png"
+        alt="">
+      Theta <span style="color: #0e8bb5;">2k23</span>
+    </a>
+    <nav class="navbar">
+      <div id="close-navbar" class="fas fa-times"></div>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/clusters">Clusters</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="icons">
+      <a href="/dashboard">
+        <div class="fas fa-user"></div>
+      </a>
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+  </header>
+  <div class="container">
+    <h1 class="text-center my-5">Our Events</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/Mathematica/razzle.jpg">
+          <div class="card-body">
+            <h3 class="card-title">RAZZLE DAZZLE</h3>
+            <p class="card-text">
+               This event is packed with full fun and based on creative ideas related to mathematics.</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample">
+            More Details
+          </button>
+        </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">RAZZLE DAZZLE</h5>
+              <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h2>Event Type: Single</h2>
+
+                <h4>Round 1: Hot potato</h4>
+                <p class="inner">This is a musical chairs-style game. When the music begins, participants
+                  should pass the balloon to other participants. After the music stops, the person
+                  with the balloon should select a piece of paper from a bowl and answer the
+                  question to continue the game.</p>
+                  <br>
+                <h4>Round 2: Connection</h4>
+                <p class="inner">It's a one-on-one game. Five questions are posed to the players. The person
+                  who responds first will be declared the winner.</p>
+                  <br>
+                <h4>Round 3: Treasure Hunt</h4>
+                <p class="inner">There will be hints concealed everywhere. The gamers will receive
+                  instructions on how to find the clues. The player must follow those hints in
+                  order to find the treasure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/Mathematica/mathplay.jpg" alt="Event Image">
+          <div class="card-body">
+            <h3 class="card-title">MATH PLAY</h3>
+            <p class="card-text">“Math-Play” and “Fun-O-Fun” this event will have interesting
+               puzzles which includes simple math formulas and idea with 3 rounds followed
+               by strict duration.</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1"
+            aria-controls="offcanvasExample">
+            More Details
+          </button>
+        </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample1"
+            aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">MATH PLAY</h5>
+              <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <h3>Event Type: Team (2 Per Team)</h3>
+                <h2>Round 1: Fun with Mathematicians </h2>
+                <p class="inner">This round will contain a glass bowl full of mathematician’s name and a bat
+                  with a ball. Two persons will be allowed to play. The Game is, one person
+                  needs to wait near the glass bowl.
+                  
+                  One person has to hit the ball continuously till they reach their
+                  team mate. Once they reached, another person will be allowed to read
+                  mathematician’s name from the bowl and vice versa for duration of about 3
+                  minutes. </p>
+                <br>
+                <h4>Round 2: Treasure for a Blind</h4>
+                <p class="inner">One person will be blindfolded. Someone else must instruct that
+                blindfolded person to pick the hidden treasure which contains a simple
+                problem. Both must solve and respond within five minutes</p>
+                <br>
+                <h4>Round 3: Blah...Blah...Blah</h4>
+                <p class="inner">One person’s mouth will be filled with water who need to face the board.
+                  With that, Blah...Blah...Blah...they have to pronounce/dictate a formula by
+                  which another person needs to follow their Blah...Blah...Blah and guess it
+                  correctly. Once the answer has been found, the Winner and Runner will be
+                  announced.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/Mathematica/dcc.jpg" alt="Event Image">
+          <div class="card-body">
+            <h3 class="card-title">DIVIDE, COMBINE AND CONQUER </h3>
+            <p class="card-text">This event combines math and fun. Our event is a double delight for the
+               players.</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2"
+            aria-controls="offcanvasExample">
+            More Details
+          </button>
+        </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample2"
+            aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">DIVIDE, COMBINE AND CONQUER </h5>
+              <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <h3>Event Type: Group</h3>
+                <h2>Round 1: Tricky cups</h2>
+                <p class="inner">The coin will be mentioned on the back of the cups. A participant will be given
+                  a bowl of coins. The player must pick a coin from a bowl and place it in a cup using a
+                  fork . The player who dropped the most coins into the designated cups wins.</p>
+                <br>
+                <h4>Round 2: Puzzle hunt</h4>
+                <p class="inner">The player will be given simple math questions to solve, and by doing so, they
+                  will receive a three-digit code to unlock the safe box. Inside the box will be an
+                  image.</p>
+                <br>
+                <h4>Round 3: Jeopardy board</h4>
+                <p class="inner">Players must choose a number from a list of topics. Each number represents a
+                  question in that topic; if the player correctly answers the question, they will be
+                  rewarded with points. The player with the highest number of points (100, 200, 500)
+                  wins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+         <div class="card">
+           <img src="images/Mathematica/funky.jpg" alt="Event Image">
+           <div class="card-body">
+             <h3 class="card-title">FUNKY FEST</h3>
+             <p class="card-text">This event is totally fun, but with a bit of simple math like graphs and shapes
+               mixed in. Participants can thoroughly enjoy their day.</p>
+           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3"
+             aria-controls="offcanvasExample">
+             More Details
+           </button>
          </div>
-       </header>
-       <div class="account-form">
-         <div id="close-form" class="fas fa-times"></div>
-         <div class="buttons">
-            <span class="btn active login-btn">Login</span>
-            <span class="btn register-btn">Register</span>
-         </div>
-         <form class="login-form active" action="">
-            <h3>Login Now</h3>
-            <input type="email" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
-            <div class="flex">
-              <input type="checkbox" name="" id="remember-me">
-              <label for="remember-me">Remember me</label>
-              <a href="#">Forgot password?</a>
-            </div>
-            <a href="error/login.html" class="btn">Login now</a>
-      
-         </form>
-         <form class="register-form" action="">
-            <h3>Register Now</h3>
-            <input type="email" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
-            <input type="password" placeholder="Confirm your password" class="box">
-            <a href="error/register.html" class="btn">Register now</a>
-         </form>
-       </div>
-      <section class="heading-link">
-         <h3>Mathematica Registration</h3>
-         <p><a href="index.php"> Theta </a> <a href="clusters.php"> / Clusters </a> / Mathematica </p>
-      </section>
-      <section class="about" style="text-align: center;">
-			<div class="content">
-				<h3 class="about-title" style="font-size: 3.6rem;">About Mathematica</h3>
-				<p style="font-size: 1.7rem;">blah blah blah<br></p>
-            <p style="font-size: 2.1rem; margin-top: -20px;">
-               <big>
-                     "Embrace Math For Brighter Tomorrow"
-               </big>
-            </p>
-			</div>
-		</section>
-      <section class="contest">
-         <h1 class="heading"> Contest Registration </h1>
-         <div class="icons-container">
-            <div class="contest-container">
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Razzle Dazzle</h3>
-                  <p>Last Date for Registration :<br> - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Mathplay</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>DCC</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Funky Fest</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Paper Presentation</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="faq">
-         <h1 class="heading">About our Events</h1>
-         <div class="accordion-container">
-            <div class="accordion active">
-               <div class="accordion-heading">
-                  <h3>Razzle Dazzle?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a short film contest with a PG-13 theme, with a 7-8 minute limit on the film's duration. The registration concludes on April 20th, 2023 and the deadline for submission is April 25th, 2023. Cash prizes of Rs. 15,000, Rs. 7,000, and Rs. 3,000 will be awarded to the top three films.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Mathplay?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a AD film contest, with a 2-3 minute limit on the AD's duration. The registration concludes on April 20th, 2023 and the deadline for submission is April 25th, 2023. Cash prizes of Rs. 3,000, Rs. 1,500, and Rs. 500 will be awarded to the top three films.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>DCC?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a MashUp contest with a theme of biography or creating awareness for society, with a duration of 2-3 minutes and may contain copyrighted material. Submissions online and prizes of Rs. 3000, Rs. 1500, and Rs. 500 for the top 3 winners.
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Funky Fest?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  This photography contest is open to college students and has two themes: digital camera photography (reflection) and mobile photography (environmental portrait). Registration concludes on April 15th, with the submission deadline on April 25th. Prizes are awarded for both categories: Rs. 3,000, Rs. 1,500, and Rs. 500 for digital camera photography, and Rs. 1,500, Rs. 700, and Rs. 300 for mobile photography. Participants must not upload photos on any social media platforms and follow all event guidelines.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Paper Presentation?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  On Spot Photography Contest for for currently enrolled college students. Theme will be revealed during the fest. Participants have 30 minutes to capture their best shot on the day of the event. Registration fee is Rs. 50 and prizes are Rs. 1,500 for first place, Rs. 700 for second place, and Rs. 300 for third place.
-               </p>
-            </div>
-         </div>
-      </section>
-      <section class="contact">
-         <h1 class="heading"> Contact Us </h1>
-            <div class="icons-container">
-               <div class="icons">
-                  <i class="fas fa-phone"></i>
-                  <h3>Phone :</h3>
-                  <label style="font-size: medium; color: #868686;">Surya   : </label><a style="font-size:medium;" href="tel:+919360617308" onclick="event.preventDefault(); window.location.href='tel:+919360617308';">+91 93606 17308</a><br>
-                  <label style="font-size: medium; color: #868686;">Ranil   : </label><a style="font-size:medium;" href="tel:+919994679774" onclick="event.preventDefault(); window.location.href='tel:+919994679774';">+91 99946 79774</a><br>
-                  <label style="font-size: medium; color: #868686;">Abinash : </label><a style="font-size:medium;" href="tel:+919345642528" onclick="event.preventDefault(); window.location.href='tel:+919345642528';">+91 93456 42528</a>
-               </div>
-               <div class="icons">
-                  <i class="fas fa-envelope"></i>
-                  <h3> Email : </h3>
-                  <a href="mailto:theta.emulsion@gmail.com" target="_blank" style="font-size: medium;">theta.emulsion@gmail.com</a>
-               </div>
-               <div class="icons">
-                  <i class="fas fa-map"></i>
-                  <h3>Instagram :</h3>
-                  <a href="https://instagram.com/team_emulsion?igshid=MGNiNDI5ZTU=" target="_blank" style="font-size: medium;">team_emulsion</a>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="footer">
-         <div class="box-container">
-             <div class="box">
-               <h3> <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
-                  Theta <span style="color: #0e8bb5;">2k23</span></h3>
-               <p>Techno-management fest of SASTRA Deemed to be University</p>
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-               </div>
+           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample3"
+             aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+             <div class="offcanvas-header">
+               <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">FUNKY FEST</h5>
+               <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                 aria-label="Close"></button>
              </div>
-            <div class="box">
-               <h3>Quick links</h3>
-               <a href="index.html" class="link">Home</a>
-               <a href="about.html" class="link">About</a>
-               <a href="clusters.html" class="link">Clusters</a>
-               <a href="contact.html" class="link">Contact</a>
-            </div>
-            <div class="box">
-               <h3>Useful links</h3>
-               <a href="https://www.sastra.edu/" target="_blank"class="link">Sastra University</a>
-               <a href="#" class="link">Rules & Regulation</a>
-            </div>
-            <div class="box">
-               <h3>Newsletter</h3>
-               <p>Subscribe for latest upadates</p>
-               <form action="">
-                  <input type="email" name="" placeholder="Enter your email" id="" class="email">
-                  <input type="submit" value="Subscribe" class="btn" onclick="showMessage()">
-               </form>
-            </div>
+             <div class="offcanvas-body">
+                <h3>Event Type: Team (4 per team)</h3>
+                 <h2>Round 1: Whisper Challenge</h2>
+                 <p class="inner">The purpose of the game is to guess what the other person is saying while
+                  wearing headphones and listening to loud music. This is a great team game. One of
+                  the participants has to whisper the given statement, while the other has to read his or
+                  her lips and find the correct statement.</p>
+                 <br>
+                 <h4>Round 2: Doodle Challenge</h4>
+                 <p class="inner">People are using their artistic skills and doodling in their spare time to complete
+                  this challenge. But there's a catch. The challenge requires two participants: one must
+                  draw on the other's back while the second attempts to recreate the image solely by
+                  feeling the movements of the pen.</p>
+                 <br>
+                 <h4>Round 3: Hack with Math</h4>
+                 <p class="inner">Math is a hack. The objective of the game is to decrypt the encrypted laptop and
+                  find the name of a mathematician displayed on the screen. To decode the password,
+                  players must solve the riddles. The password will be numeric, alphabetic, or
+                  alphanumeric in nature.</p>
+             </div>
+           </div>
          </div>
-         <div class="credit">
-             Created by <span>Emulsion</span> | all rights reserved! 
+       </div>
+       <div class="col-md-4">
+         <div class="card">
+           <img src="images/Mathematica/paper.jpg" alt="Event Image">
+           <div class="card-body">
+             <h3 class="card-title">PAPER PRESENTATION</h3>
+             <p class="card-text">This event combines math and fun. Our event is a double delight for the
+                players.</p>
+           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample4"
+             aria-controls="offcanvasExample">
+             More Details
+           </button>
          </div>
-       </section>
-      
-       <script>
-         function showMessage() {
-           alert("Thanks for subscribing :)");
-         }
-      </script>
-      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-      <script src="js/script.js"></script>
-      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-   </body>
-</html>
+           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample4"
+             aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+             <div class="offcanvas-header">
+               <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">PAPER PRESENTATION</h5>
+               <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                 aria-label="Close"></button>
+             </div>
+             <div class="offcanvas-body">
+                <h3>Event Type: Individual or Team (2per team)</h3>
+                 <h2>Event Description:</h2>
+                 <p>Students should present their ideas about the following topics:</p>
+                 <ol>
+                  <li>Work of Ramanujan and its Applications</li>
+                  <li>Cryptocurrency and Block chains</li>
+                  <li>Mathematics and Art</li>
+                  <li>Graph Theory in Google Map</li>
+                  <li>Mathematics in social media (except WhatsApp)</li>
+                  <li>Mathematics in Control System</li>
+                  <li>Artificial Intelligence and Mathematics</li>
+                  <li>Computer Graphics</li>
+                  <li>Game theory</li>
+                  <li>Data Structures and Algorithm</li>
+                  <li>Mathematics in Machine Learning</li>
+                  <li>Data science</li>
+                  <li>Data Analysis</li>
+                 </ol>
+                 <p>The presentation should include short intro, a brief description of the topic and
+                  unique conclusion.</p>
+                 <br>
+             </div>
+           </div>
+         </div>
+       </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <h3 class="card-title">Interested in our Events...?</h3>
+            <a href="/events"> <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#luckycorner-details" aria-controls="luckycorner-details" id="details-toggle">Register Now </button> </a>
+          </div>
+        </div>
+     </div>
+    </div>
+  </div>
+  <style>
+    .card {
+      margin: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .card-text {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .header a {
+      text-decoration: none;
+    }
+  .offcanvas {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 400px;
+}
+
+.offcanvas-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+}
+
+.offcanvas-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.offcanvas-body {
+  font-size: 18px;
+}
+
+.offcanvas-body * {
+  font-size: inherit;
+}
+
+.inner{
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+  </style>
+
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
