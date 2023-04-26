@@ -128,7 +128,11 @@ app.get("/login",(req,res)=>{
 })
 
 app.get("/events",(req,res)=>{
-  res.render('events');
+  if(req.isAuthenticated()){
+    res.render('events');
+  }else{
+    res.redirect("/");
+  }
 })
 
 
@@ -194,7 +198,6 @@ app.post('/reg-event', async(req, res) => {
 app.get("/dashboard",(req,res)=>{
   if(req.isAuthenticated())
   {
-    console.log(req.user);
     res.render('dashboard',{user:req.user})
 
   }
