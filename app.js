@@ -117,7 +117,7 @@ app.get("/Mathematica", (req, res) => {
 app.get("/Optica", (req, res) => {
   res.sendFile(__dirname + "/Optica.html");
 });
-app.get("/Robotics", (req, res) => {
+app.get("/Pabbaja", (req, res) => {
   res.sendFile(__dirname + "/Pabbaja.html");
 });
 app.get("/Sportiva", (req, res) => {

@@ -1,229 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Pabbaja 2k23</title>
-      <link rel="icon" type="image/png" href="images/pabbaja1.jpg">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-      <link rel="stylesheet" href="css/style.css">
-   </head>
-   <body>
-      <header class="header">
-         <a href="#" class="logo"> 
-            <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
-             Theta <span style="color: #0e8bb5;">2k23</span>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Theta 2k23</title>
+   <link rel="icon" type="image/png" href="images/logo.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/style-custom.css">
+
+</head>
+
+<body>
+   <header class="header">
+      <a href="/" class="logo">
+         <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png"
+            alt="">
+         Theta <span style="color: #0e8bb5;">2k23</span>
+      </a>
+      <nav class="navbar">
+         <div id="close-navbar" class="fas fa-times"></div>
+         <a href="/">Home</a>
+         <a href="/about">About</a>
+         <a href="/clusters">Clusters</a>
+         <a href="/contact">Contact</a>
+      </nav>
+      <div class="icons">
+         <a href="/dashboard">
+            <div class="fas fa-user"></div>
          </a>
-			<nav class="navbar">
-			   <div id="close-navbar" class="fas fa-times"></div>
-			   <a href="/">Home</a>
-			   <a href="/about">About</a>
-			   <a href="/clusters">Clusters</a>
-			   <a href="/contact">Contact</a>
-			</nav>
-         <div class="icons">
-            <div id="account-btn" class="fas fa-user"></div>
-            <div id="menu-btn" class="fas fa-bars"></div>
-         </div>
-       </header>
-       <div class="account-form">
-         <div id="close-form" class="fas fa-times"></div>
-         <div class="buttons">
-            <span class="btn active login-btn">Login</span>
-            <span class="btn register-btn">Register</span>
-         </div>
-         <form class="login-form active" action="">
-            <h3>Login Now</h3>
-            <input type="email" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
-            <div class="flex">
-              <input type="checkbox" name="" id="remember-me">
-              <label for="remember-me">Remember me</label>
-              <a href="#">Forgot password?</a>
-            </div>
-            <a href="error/login.html" class="btn">Login now</a>
-      
-         </form>
-         <form class="register-form" action="">
-            <h3>Register Now</h3>
-            <input type="email" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
-            <input type="password" placeholder="Confirm your password" class="box">
-            <a href="error/register.html" class="btn">Register now</a>
-         </form>
-       </div>
-      <section class="heading-link">
-         <h3>Pabbaja Registration</h3>
-         <p><a href="index.html"> Theta </a> <a href="clusters.html"> / Clusters </a> / Pabbaja </p>
-      </section>
-      <section class="about" style="text-align: center;">
-			<div class="content">
-				<h3 class="about-title" style="font-size: 3.6rem;">About Pabbaja</h3>
-				<p style="font-size: 1.7rem;">blah blah blah<br></p>
-            <p style="font-size: 2.1rem; margin-top: -20px;">
-               <big>
-                     "தமிழுக்கு அமுதென்று பெயர் உண்டு"
-               </big>
-            </p>
-			</div>
-		</section>
-      <section class="contest">
-         <h1 class="heading"> Contest Registration </h1>
-         <div class="icons-container">
-            <div class="contest-container">
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Kalam</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+   </header>
+   <div class="container">
+      <h1 class="text-center my-5">Our Events</h1>
+      <div class="row">
+         <div class="col-md-4">
+            <div class="card">
+               <img src="https://via.placeholder.com/500x200">
+               <div class="card-body">
+                  <h3 class="card-title">KALAM</h3>
+                  <p class="inner">This event is to bring out the speaking skills and analyze thought process of the
+                     participants with
+                     entertaining game events.</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                     More Details
+                  </button>
                </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>All in all Azhaguraja</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Thamilzhodu Vilayadu</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Rajapat</h3>
-                  <p>Last Date for Registration :<br>  - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
-               </div>
-               <div class="contest-box">
-                  <i class='bx bx-game'></i>
-                  <h3>Penamunaiyil Pesu</h3>
-                  <p>Last Date for Registration :<br> 20 - 04 - 2023</p>
-                  <a href = "#" class = "btn">Register Now</a>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                  aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+                  <div class="offcanvas-header">
+                     <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">KALAM</h5>
+                     <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+
+                     <h4>Round 1: “OBJECTION YOUR HONOUR”</h4>
+                     <p class="inner">Participants will be given a random topic and will be asked to speak about the
+                        topic for 3
+                        mins and the same person will speak on different perspective of the same topic after 3 mins.
+                        Winner will be selected on the basis of their thought process.
+                     <p>
+                        <br>
+                     <h4>Round 2: “MY KARUTHU WHAT IS I’M SAYING..”</h4>
+                     <p class="inner">Participants will be allowed to choose a topic from the given list. 2 minutes will
+                        be allocated
+                        for the speaker and at the end of 2nd min, the speaker will select a member from another team
+                        to share their opinions. Participants will be selected based on their voice tone, speech style
+                     </p>
+                  </div>
                </div>
             </div>
          </div>
-      </section>
-      <section class="faq">
-         <h1 class="heading">About our Events</h1>
-         <div class="accordion-container">
-            <div class="accordion active">
-               <div class="accordion-heading">
-                  <h3>Kalam?</h3>
-                  <i class="fas fa-angle-down"></i>
+         <div class="col-md-4">
+            <div class="card">
+               <img src="https://via.placeholder.com/500x200" alt="Event Image">
+               <div class="card-body">
+                  <h3 class="card-title">ALL IN ALL AZHAGURAJA</h3>
+                  <p class="inner">This is a 100% fun event with exciting games and tasks. The team which finishes the
+                     game series with
+                     minimum time and has maximum points are selected as winners.</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                     data-bs-target="#offcanvasExample1" aria-controls="offcanvasExample">
+                     More Details
+                  </button>
                </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a short film contest with a PG-13 theme, with a 7-8 minute limit on the film's duration. The registration concludes on April 20th, 2023 and the deadline for submission is April 25th, 2023. Cash prizes of Rs. 15,000, Rs. 7,000, and Rs. 3,000 will be awarded to the top three films.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>All in all Azhaguraja?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a AD film contest, with a 2-3 minute limit on the AD's duration. The registration concludes on April 20th, 2023 and the deadline for submission is April 25th, 2023. Cash prizes of Rs. 3,000, Rs. 1,500, and Rs. 500 will be awarded to the top three films.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Thamilzhodu Vilaiyadu?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  Currently enrolled college students can register for a MashUp contest with a theme of biography or creating awareness for society, with a duration of 2-3 minutes and may contain copyrighted material. Submissions online and prizes of Rs. 3000, Rs. 1500, and Rs. 500 for the top 3 winners.
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Rajapat?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  This photography contest is open to college students and has two themes: digital camera photography (reflection) and mobile photography (environmental portrait). Registration concludes on April 15th, with the submission deadline on April 25th. Prizes are awarded for both categories: Rs. 3,000, Rs. 1,500, and Rs. 500 for digital camera photography, and Rs. 1,500, Rs. 700, and Rs. 300 for mobile photography. Participants must not upload photos on any social media platforms and follow all event guidelines.
-               </p>
-            </div>
-            <div class="accordion">
-               <div class="accordion-heading">
-                  <h3>Penamunaiyil Pesu?</h3>
-                  <i class="fas fa-angle-down"></i>
-               </div>
-               <p class="accordion-content">
-                  On Spot Photography Contest for for currently enrolled college students. Theme will be revealed during the fest. Participants have 30 minutes to capture their best shot on the day of the event. Registration fee is Rs. 50 and prizes are Rs. 1,500 for first place, Rs. 700 for second place, and Rs. 300 for third place.
-               </p>
-            </div>
-         </div>
-      </section>
-      <section class="contact">
-         <h1 class="heading"> Contact Us </h1>
-            <div class="icons-container">
-               <div class="icons">
-                  <i class="fas fa-phone"></i>
-                  <h3>Phone :</h3>
-                  <label style="font-size: medium; color: #868686;">Surya   : </label><a style="font-size:medium;" href="tel:+919360617308" onclick="event.preventDefault(); window.location.href='tel:+919360617308';">+91 93606 17308</a><br>
-                  <label style="font-size: medium; color: #868686;">Ranil   : </label><a style="font-size:medium;" href="tel:+919994679774" onclick="event.preventDefault(); window.location.href='tel:+919994679774';">+91 99946 79774</a><br>
-                  <label style="font-size: medium; color: #868686;">Abinash : </label><a style="font-size:medium;" href="tel:+919345642528" onclick="event.preventDefault(); window.location.href='tel:+919345642528';">+91 93456 42528</a>
-               </div>
-               <div class="icons">
-                  <i class="fas fa-envelope"></i>
-                  <h3> Email : </h3>
-                  <a href="mailto:theta.emulsion@gmail.com" target="_blank" style="font-size: medium;">theta.emulsion@gmail.com</a>
-               </div>
-               <div class="icons">
-                  <i class="fas fa-map"></i>
-                  <h3>Instagram :</h3>
-                  <a href="https://instagram.com/team_emulsion?igshid=MGNiNDI5ZTU=" target="_blank" style="font-size: medium;">team_emulsion</a>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample1"
+                  aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+                  <div class="offcanvas-header">
+                     <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">ALL IN ALL AZHAGURAJA</h5>
+                     <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                     <h2>Refreshment Round: ‘Simon Says!’ </h2>
+                     <ul>
+                        <li>Round 1:
+                           <p class="inner"><Strong>Game 1:</Strong>“MUDINJA KANDUPUDI”: All the players in the team
+                              pull a cup of water using a
+                              tissue roll and fill another empty cup using straw. First player who finishes this task,
+                              is allowed to
+                              touch a given object/toy and gives 5 clues to the other players. And those players are
+                              supposed
+                              find the object using the clues.</p><br>
+                           <p class="inner"><Strong>Game 2:</Strong>“UNNA KEKALA DA.....”: In this game the participants
+                              play a pictionary game
+                              simultaneously with ‘The lawyer’ game..</p><br>
+                           <p class="inner"><Strong>Game 3:</Strong>“SONAMUTHA POCHA?...”: In this game one of the team
+                              player draws an object
+                              using instructions given by their team. The picture to be drawn is selected by playing a
+                              game with
+                              another team.</p><br>
+                           <p><strong>Bonus Round: Match the number! Catch the bonus!!</strong></p><br>
+                           <p class="inner"><Strong>Game 4:</Strong>“AAH..THALLU THALLU THALLU THALLU....!”: The players
+                              should answer
+                              the previous question asked by the event organizers while not letting the balloon to fall.
+                              The
+                              players cannot touch the balloon but can just blow it to prevent it from falling..</p><br>
+                           <p class="inner"><Strong>Game 5:</Strong>“EPPA PAATHALUM SAAPADU SAAPADU”: Selected teams
+                              answer a common
+                              question. One of the members ties a blind fold & eats a candy which is hung. The team can
+                              answer the question only after the person with blind fold finishes eating the candy.</p>
+                        </li>
+                        <li>
+                           <h2>Round 2(auditorium) </h2>
+                           <p><strong>4 teams are selected from round 1</strong></p>
+                           <p class="inner"><Strong>Game 1:</Strong>”CINEMA! CINEMA!! ” : Selected teams from Round 1
+                              guess the movie name by
+                              connecting the pictures. (Connection game).</p><br>
+                           <p class="inner"><Strong>Game 2:</Strong>“ENGLISH THERIYADHA?”: Each team translates the
+                              given Tamil movie scene to
+                              English.</p><br>
+                           <p class="inner"><Strong>Game 3:</Strong>”PAATU PAADAVA?”: Each team are asked to complete
+                              the song lyrics or guess the
+                              song by its karaoke.</p>
+
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
-      </section>
-      <section class="footer">
-         <div class="box-container">
-             <div class="box">
-               <h3> <img style="font-size: 30px; font-weight: bold; color: #0e8bb5; margin-bottom:-5px;" src="images/loogoo.png" alt="">
-                  Theta <span style="color: #0e8bb5;">2k23</span></h3>
-               <p>Techno-management fest of SASTRA Deemed to be University</p>
-               <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-instagram"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
+         <div class="col-md-4">
+            <div class="card">
+               <img src="https://via.placeholder.com/500x200" alt="Event Image">
+               <div class="card-body">
+                  <h3 class="card-title">THAMIZHODU VILAIYAADU</h3>
+                  <p class="inner">Thamizhodu Vilaiyaadu is a fun interactive game series among team members, integrated with Tamil
+                     literature. (3 per team)</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                     data-bs-target="#offcanvasExample2" aria-controls="offcanvasExample">
+                     More Details
+                  </button>
                </div>
-             </div>
-            <div class="box">
-               <h3>Quick links</h3>
-               <a href="index.html" class="link">Home</a>
-               <a href="about.html" class="link">About</a>
-               <a href="clusters.html" class="link">Clusters</a>
-               <a href="contact.html" class="link">Contact</a>
-            </div>
-            <div class="box">
-               <h3>Useful links</h3>
-               <a href="https://www.sastra.edu/" target="_blank"class="link">Sastra University</a>
-               <a href="#" class="link">Rules & Regulation</a>
-            </div>
-            <div class="box">
-               <h3>Newsletter</h3>
-               <p>Subscribe for latest upadates</p>
-               <form action="">
-                  <input type="email" name="" placeholder="Enter your email" id="" class="email">
-                  <input type="submit" value="Subscribe" class="btn" onclick="showMessage()">
-               </form>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample2"
+                  aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+                  <div class="offcanvas-header">
+                     <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">THAMIZHODU VILAIYAADU</h5>
+                     <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                     <ul>
+                        <li>Round 1:
+                           <p class="inner"><Strong>Stage 1:</Strong>MANDA MELA IRUKURA KONDAIYA PAARU: This is a super fun game
+                              where the participants will find a word written in a cap on their head using the clues given by
+                              their team.</p><br>
+                           <p class="inner"><Strong>Stage 2:</Strong>KURAL SOLLAVAA?: In this game the team have to find the Thirukural said by
+                              their team member with water in their mouth.</p><br>
+                           <p class="inner"><Strong>Stage 3:</Strong>“I’M WAITING”: The team has to wait for the question until their team member
+                              completes a series of tasks given. The team which finds the answer for maximum no. of
+                              questions will be qualified to next round.</p>
+                        </li>
+                        <li>
+                           <h2>Round 2:</h2>
+                           <p class="inner"><Strong>Stage 1:</Strong>YAARADHU.... YAARADHU?: The team is supposed to find the Tamil poet or
+                              novelist by their sayings or poems. Participants will be asked blow the ball to the other end of
+                              the cup before actually presenting their answers.</p><br>
+                           <p class="inner"><Strong>Stage 2:</Strong>EDHEI....KEKKALA......SATHAMA.....!!: Event organizers will read a tongue
+                              twister once, to one person of the team. This has to be passed on to the successive members
+                              secretly. If a person wants to hear the tongue twister again he/she will be asked to perform a
+                              task to hear the twister again. So, Sharpen your ears!!!!.</p><br>
+                           <p class="inner"><Strong>Stage 3:</Strong>“PONNINADHI PAAKANUME”: A character name from Ponniyin Selvan is
+                              jumbled in a box. One of the team player with blind fold arranges the letters. The character
+                              has to be found by the other teammates using the clues given by the organizers and they help
+                              their member in arranging the letters of the character.</p>
+
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
-         <div class="credit">
-             Created by <span>Emulsion</span> | all rights reserved! 
+         <div class="col-md-4">
+            <div class="card">
+               <img src="https://via.placeholder.com/500x200" alt="Event Image">
+               <div class="card-body">
+                  <h3 class="card-title">RAJAPAT</h3>
+                  <p class="inner">Rajapat brings out the star actor in you. So, Lights! Camera! Rolling! Action!</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                     data-bs-target="#offcanvasExample3" aria-controls="offcanvasExample">
+                     More Details
+                  </button>
+               </div>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample3"
+                  aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+                  <div class="offcanvas-header">
+                     <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">RAJAPAT</h5>
+                     <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                     <ul>
+                        <li>
+                           <h3>Round 1:</h3>
+                           <p class="inner">DEI...PARAMA! NADI DA!!!!!
+                              A concept or scene is given which the participants are asked to act in their style. They are
+                              selected based on their acting skills and creative approach to the given concept or scene.</p>
+                        </li>
+                        <li>
+                           <h3>Round 2:</h3>
+                           <p class="inner">ADANGAPPA IDHU ULAGA NADIPU DA SAAMY!!
+                              A story line is given and the qualified people are asked to develop the story by acting for a
+                              specified time.</p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
          </div>
-       </section>
-      
-       <script>
-         function showMessage() {
-           alert("Thanks for subscribing :)");
-         }
-      </script>
-      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-      <script src="js/script.js"></script>
-      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-   </body>
-</html>
+         <div class="col-md-4">
+            <div class="card">
+               <img src="https://via.placeholder.com/500x200" alt="Event Image">
+               <div class="card-body">
+                  <h3 class="card-title">“PENAMUNAIYIL PESU”</h3>
+                  <p class="inner">This event focuses on creative thinking and writing skills of participants amidst of exciting
+                     tasks</p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                     data-bs-target="#offcanvasExample4" aria-controls="offcanvasExample">
+                     More Details
+                  </button>
+               </div>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample4"
+                  aria-labelledby="offcanvasExampleLabel" data-bs-backdrop="false" data-bs-scroll="true">
+                  <div class="offcanvas-header">
+                     <h5 class="offcanvas-title offcanvas-body" id="offcanvasExampleLabel">PIVOTAL</h5>
+                     <button type="button" class="btn-close offcanvas-body" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                     <ul>
+                        <li>
+                           <h3>Round 1:</h3>
+                           <p class="inner">“ORU KADHA SOLLATA SIR?” 
+                              A common topic or a concept is given to the participants and they are asked to write a story of
+                              their own within the stipulated time.</p>
+                        </li>
+                        <li>
+                           <h3>Round 2:</h3>
+                           <p class="inner">“ORU OORLA....”
+                              In this round, the selected people from the previous round is given a story line and are asked
+                              to develop the story. The challenge is that they are supposed to include various emotions
+                              given by the event organizers in their story.</p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-body" style="text-align: center;">
+                  <h3 class="card-title">Interested in our Events...?</h3>
+                  <a href="/events"> <button class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#luckycorner-details" aria-controls="luckycorner-details"
+                        id="details-toggle">Register Now </button> </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <style>
+      .card {
+         margin: 20px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         transition: 0.3s;
+      }
+
+      .card:hover {
+         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+      }
+
+      .card-title {
+         font-size: 24px;
+         font-weight: bold;
+         margin-top: 20px;
+      }
+
+      .card-text {
+         font-size: 18px;
+         margin-top: 10px;
+      }
+
+      .header a {
+         text-decoration: none;
+      }
+
+      .offcanvas {
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         width: 80%;
+         max-width: 400px;
+      }
+
+      .offcanvas-header {
+         background-color: #007bff;
+         color: #fff;
+         padding: 1rem;
+      }
+
+      .offcanvas-title {
+         font-size: 1.5rem;
+         font-weight: bold;
+      }
+
+      .offcanvas-body {
+         font-size: 18px;
+      }
+
+      .offcanvas-body * {
+         font-size: inherit;
+      }
+
+      .inner {
+         font-size: 15px;
+      }
+
+      h2 {
+         font-size: 2rem;
+         margin-bottom: 1rem;
+      }
+
+      h3 {
+         font-size: 1.5rem;
+         margin-bottom: 1rem;
+      }
+
+      h4 {
+         font-size: 1.2rem;
+         margin-bottom: 0.5rem;
+      }
+
+      p {
+         font-size: 1rem;
+         line-height: 1.5;
+         margin-bottom: 1rem;
+      }
+   </style>
+
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+   <!-- <script src="js/script.js"></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
