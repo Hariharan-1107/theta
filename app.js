@@ -134,7 +134,50 @@ app.get("/events",(req,res)=>{
     res.redirect("/");
   }
 })
-
+async function addValues(userId, clusterArray, newValues) {
+  try {
+    const result = await User.updateOne({ _id: userId }, { $push: { [clusterArray]: newValues  } });
+    console.log(`${clusterArray} array updated for user ${userId}`);
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  }
+}
+app.post("/register",async (req,res)=>{
+  if(req.isAuthenticated()){
+    const cluster=req.body.cluster;
+    const event=req.body.event;
+    addValues(req.user._id,cluster,event);
+    const events=req.user.events.name;
+    if(events.includes(cluster))
+    {
+      try {
+        const index = events.indexOf(cluster);
+        const reqArray=req.user.events.eventArray[index];
+        reqArray.push(event);
+        User.updateOne(
+            {_id:req.user._id},
+          { $set: { ['eventArray.' + index]: reqArray } },
+        );
+      } catch (err) {
+        console.error(err);
+      }
+    }else{
+      try {
+        const result = await User.updateOne(
+          { _id: req.user._id },
+          { $push: { "events.name": cluster, "events.eventArray":  event } } ,
+        );      
+      } catch(err) {
+        console.error(err);
+      }
+    }
+    res.send("Registration Successfull")
+  }
+  else{
+    res.redirect("/");
+  }
+})
 
 app.post("/signin", async (req, res) => {
   User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number },req.body.password,function(err,user)
@@ -167,37 +210,10 @@ app.post("/login",async(req,res)=>{
   })
 })
 
-async function addAccessValues(userId, accessArray, newValues) {
-  try {
-    const result = await User.updateOne({ _id: userId }, { $push: { [accessArray]: { $each: newValues } } });
-    console.log(`${accessArray} array updated for user ${userId}`);
-    console.log(result);
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-app.post('/reg-event', async(req, res) => {
-  for(const key in req.body) {
-    const accessArray = key;
-    const values=req.body[key];
-    addAccessValues(req.user._id, accessArray, values);
-    try {
-      const result = await User.updateOne(
-        { _id: req.user._id },
-        { $push: { "events.name": accessArray, "events.eventArray":  values } } ,
-      );      
-    } catch(err) {
-      console.error(err);
-    }
-  }
-  res.redirect("/dashboard");
-});
-
-
 app.get("/dashboard",(req,res)=>{
   if(req.isAuthenticated())
   {
+    console.log(req.user.events);
     res.render('dashboard',{user:req.user})
 
   }
