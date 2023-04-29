@@ -48,17 +48,50 @@ const userSchema=new mongoose.Schema({
     name:[String],
     eventArray:[Array],
   },
-  Access:[String],
-  Biogenesis:[String],
-  Electronica:[String],
-  Equilibria:[String],
-  Informatica:[String],
-  Mathematica:[String],
-  Optica:[String],
-  Pabbaja:[String],
-  Robotics:[String],
-  Sportiva:[String],
-  Emulsion:[String],
+  Access: {
+    type: [String],
+    unique: true,
+  },
+  Biogenesis: {
+    type: [String],
+    unique: true,
+  },
+  Electronica: {
+    type: [String],
+    unique: true,
+  },
+  Equilibria: {
+    type: [String],
+    unique: true,
+  },
+  Informatica: {
+    type: [String],
+    unique: true,
+  },
+  Mathematica: {
+    type: [String],
+    unique: true,
+  },
+  Optica: {
+    type: [String],
+    unique: true,
+  },
+  Pabbaja: {
+    type: [String],
+    unique: true,
+  },
+  Robotics: {
+    type: [String],
+    unique: true,
+  },
+  Sportiva: {
+    type: [String],
+    unique: true,
+  },
+  Emulsion: {
+    type: [String],
+    unique: true,
+  },
   password:String
 })
 
