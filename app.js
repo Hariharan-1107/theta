@@ -5,10 +5,12 @@ import { dirname } from 'path';
 import mime from 'mime';
 import mongoose, { Schema } from 'mongoose';
 import session from 'express-session';
+import { v4 as uuidv4 } from 'uuid';
 import passport  from 'passport';
 import passportLocalMongoose from 'passport-local-mongoose';
 import { Console, log } from 'console';
 import { check } from 'express-validator';
+import crypto from 'crypto';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -31,10 +33,17 @@ mongoose.connect("mongodb+srv://hariharan:hariharan11@cluster0.yctk4yu.mongodb.n
   useNewUrlParser: true,});
 const eventSchema = new Schema({name:String});
 const userSchema=new mongoose.Schema({
+  id: {
+    type: String,
+    unique: true,
+    required: true,
+  },
   email:String,
   fname:String,
   lname:String,
   ph:String,
+  Sastraite:Boolean,
+  collegeName:String,
   events:{
     name:[String],
     eventArray:[Array],
@@ -54,6 +63,17 @@ const userSchema=new mongoose.Schema({
 })
 
 userSchema.plugin(passportLocalMongoose);
+
+
+
+function generateRandomId(length = 4) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
 
 const User =new mongoose.model('User',userSchema)
 
@@ -180,7 +200,7 @@ app.post("/register",async (req,res)=>{
 })
 
 app.post("/signin", async (req, res) => {
-  User.register({username:req.body.username,fname:req.body.fname,lname:req.body.lname,ph:req.body.number },req.body.password,function(err,user)
+  User.register({username:req.body.username,id:generateRandomId(),fname:req.body.fname,lname:req.body.lname,ph:req.body.number,Sastraite:req.body.sastraite,collegeName:req.body.cname},req.body.password,function(err,user)
   {
     if(err){
         console.log(err);
