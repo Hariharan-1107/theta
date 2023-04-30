@@ -50,9 +50,9 @@
                 <label for="remember-me">Remember me</label>
                 <a href="#">Forgot password?</a>
             </div>
-            <% if (error) { %>
+            <% if (error===1) { %>
                 <script>
-                    alert("Incorrect Email or password");
+                    alert("Please Login into Your Account first");
                 </script>
                 <% } %>
                     <button type="submit" class="btn">Login</button>

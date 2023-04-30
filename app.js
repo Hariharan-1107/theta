@@ -127,7 +127,7 @@ app.get("/", (req, res) => {
   }
   else
   {
-    res.render('main',{error:""});
+    res.render('main',{error:0});
   }
  
 });
@@ -228,7 +228,7 @@ app.post("/register",async (req,res)=>{
     res.send("Registration Successfull")
   }
   else{
-    res.redirect("/");
+    res.render('main',{error:1});
   }
 })
 
