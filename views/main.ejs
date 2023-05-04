@@ -59,9 +59,9 @@
         </form>>
         <form class="register-form active" action="/signin" method="post">
             <h3>Register Now</h3>
-            <input type="text" placeholder="Enter your firstname" name="fname" class="box">
-            <input type="text" placeholder="Enter your lastname" name="lname" class="box">
-            <input type="text" placeholder="Enter your Phone number" name="number" class="box">
+            <input type="text" placeholder="Enter your firstname" name="fname" class="box" required>
+            <input type="text" placeholder="Enter your lastname" name="lname" class="box" required>
+            <input type="text" placeholder="Enter your Phone number" name="number" class="box" required>
             <div class="question">
                 <p>Are you a Sastraite..?</p>
                 <label class="checkbox-label">
@@ -76,9 +76,9 @@
                 </div>
             </div>
 
-            <input type="email" placeholder="Enter your email" name="username" class="box">
-            <input type="password" placeholder="Enter your password" name="password" class="box">
-            <input type="password" placeholder="Confirm your password" name="cpassword" class="box">
+            <input type="email" placeholder="Enter your email" name="username" class="box" required>
+            <input type="password" placeholder="Enter your password" name="password" class="box" required>
+            <input type="password" placeholder="Confirm your password" name="cpassword" class="box" required>
             <button class="btn" type="submit">Register now</button>
         </form>
     </div>
