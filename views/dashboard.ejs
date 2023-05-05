@@ -92,7 +92,7 @@
 				<% if (user.Biogenesis.length === 0) { %>
 					<div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<div>You have not registered for any Access events yet. <br><br> <a href="/Biogenesis"><button class="btn btn-success">Register for an Event</button></a></div>
+							<div>You have not registered for any Biogenesis events yet. <br><br> <a href="/Biogenesis"><button class="btn btn-success">Register for an Event</button></a></div>
 						</div>
 					  </div>
 				<% }else{ %>
@@ -122,7 +122,7 @@
 			<% if (user.Electronica.length === 0) { %>
 				<div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 					<div class="accordion-body">
-						<div>You have not registered for any Access events yet. <br><br> <a href="/Electronica"><button class="btn btn-success">Register for an Event</button></a></div>
+						<div>You have not registered for any Electronica events yet. <br><br> <a href="/Electronica"><button class="btn btn-success">Register for an Event</button></a></div>
 					</div>
 				  </div>
 			<% }else{ %>
@@ -152,7 +152,7 @@
 		<% if (user.Equilibria.length === 0) { %>
 			<div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Equilibria"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Equilibira events yet. <br><br> <a href="/Equilibria"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
@@ -182,7 +182,7 @@
 		<% if (user.Informatica.length === 0) { %>
 			<div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Informatica"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Informatica events yet. <br><br> <a href="/Informatica"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
@@ -212,7 +212,7 @@
 		<% if (user.Mathematica.length === 0) { %>
 			<div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Mathematica"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Mathematica events yet. <br><br> <a href="/Mathematica"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
@@ -242,7 +242,7 @@
 		<% if (user.Optica.length === 0) { %>
 			<div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Optica"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Optica events yet. <br><br> <a href="/Optica"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
@@ -272,7 +272,7 @@
 		<% if (user.Pabbaja.length === 0) { %>
 			<div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Pabbaja"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Pabbaja events yet. <br><br> <a href="/Pabbaja"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
@@ -302,7 +302,7 @@
 		<% if (user.Robotics.length === 0) { %>
 			<div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Robotics"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Robotics events yet. <br><br> <a href="/Robotics"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
@@ -332,43 +332,13 @@
 		<% if (user.Sportiva.length === 0) { %>
 			<div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Sportiva"><button class="btn btn-success">Register for an Event</button></a></div>
+					<div>You have not registered for any Sportiva events yet. <br><br> <a href="/Sportiva"><button class="btn btn-success">Register for an Event</button></a></div>
 				</div>
 			  </div>
 		<% }else{ %>
 		<div id="collapse10" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
 		  <div class="accordion-body">
 			<%user.Sportiva.forEach(event=>{%>
-				<ul>
-					<li>
-						<%=event%>
-					</li>
-				</ul>
-			<%})%>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  <% } %>
-</div>
-<div class="card-deck">
-	<div class="accordion" id="accordionExample">
-	  <div class="accordion-item">
-		<h2 class="accordion-header">
-		  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse">
-			Emulsion
-		  </button>
-		</h2>
-		<% if (user.Emulsion.length === 0) { %>
-			<div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-				<div class="accordion-body">
-					<div>You have not registered for any Access events yet. <br><br> <a href="/Emulsion"><button class="btn btn-success">Register for an Event</button></a></div>
-				</div>
-			  </div>
-		<% }else{ %>
-		<div id="collapse11" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-		  <div class="accordion-body">
-			<%user.Emulsion.forEach(event=>{%>
 				<ul>
 					<li>
 						<%=event%>
